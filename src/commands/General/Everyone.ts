@@ -11,7 +11,7 @@ export default class Command extends BaseCommand {
             aliases: ['all', 'tagall'],
             category: 'general',
             usage: `${client.config.prefix}everyone`,
-            adminOnly: true
+            adminOnly: false
         })
     }
 

@@ -2,9 +2,9 @@ import MessageHandler from '../Handlers/MessageHandler'
 import BaseCommand from '../lib/BaseCommand'
 import WAClient from '../lib/WAClient'
 import { IParsedArgs, ISimplifiedMessage } from '../typings'
-const { isTicTacToe, getPosTic } = require("../lib/tictactoe");
-const game = require("../lib/game");
-const tictac = require("../lib/tictac");
+import { isTicTacToe, getPosTic } = require("../lib/tictactoe") 
+import game = require("../lib/game")
+import tictac = require("../lib/tictac")
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {

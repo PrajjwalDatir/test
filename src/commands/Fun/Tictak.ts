@@ -4,7 +4,7 @@ import WAClient from '../lib/WAClient'
 import { IParsedArgs, ISimplifiedMessage } from '../typings'
 const { isTicTacToe, getPosTic } = require("../lib/tictactoe");
 const game = require("../lib/game");
-
+const tictac = require("../lib/tictac");
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {

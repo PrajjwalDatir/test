@@ -2,9 +2,9 @@ import MessageHandler from '../Handlers/MessageHandler'
 import BaseCommand from '../lib/BaseCommand'
 import WAClient from '../lib/WAClient'
 import { IParsedArgs, ISimplifiedMessage } from '../typings'
-import { isTicTacToe, getPosTic } from "../lib/tictactoe"
-import game from "../lib/game"
-import tictac from "../lib/tictac"
+import { isTicTacToe, getPosTic } from '../lib/tictactoe'
+import game from '../lib/game'
+import tictac from '../lib/tictac'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
@@ -16,7 +16,7 @@ export default class Command extends BaseCommand {
     }
 
     //eslint-disable-next-line
-    run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {let tictactoe = [];
+    run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {let tictactoe = []
           if (isTicTacToe(from, tictactoe)) tictac(chats, prefix, tictactoe, from, sender, reply, mentions, addBalance, balance) 
            case prefix+'tictactoe': case prefix+'ttt': case prefix+'ttc':
 

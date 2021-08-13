@@ -33,6 +33,10 @@
       "MONGO_URI": {
         "description": "A secret String for Mongodb Connection.(Required)"
       },
+       "EIF": "https://express-is-fun.herokuapp.com/api",
+       "ADMIN_GROUP_JID": {
+       "required": false
+      },
       "GOOGLE_API_KEY": {
         "description": "Google API key for Google searches for MODS (Not Required)",
         "required": false

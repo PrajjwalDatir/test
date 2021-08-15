@@ -1,1 +1,1 @@
-declare module 'wikipedia
+declare module 'wikipedia'

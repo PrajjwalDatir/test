@@ -20,7 +20,7 @@ export default class Command extends BaseCommand {
             description:- 'testing...',
             category: 'general', 
             usage: `${client.config.prefix}dym
-            baseXp:30
+            baseXp: 30
          
 
         })

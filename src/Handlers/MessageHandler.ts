@@ -46,7 +46,7 @@ export default class MessageHandler {
             return void this.client.log(err.message, true)
         }
     }
-handleDirectMessage = async (M: WAMessage): Promise<void> => {
+    handleDirectMessage = async (M: WAMessage): Promise<void> => {
 
         const from = M.key.remoteJid
 

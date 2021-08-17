@@ -27,15 +27,16 @@ export default class Command extends BaseCommand {
     //eslint-disable-next-line
 
     run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {
-    await axios.get('https://api.quotable.io/random').then(res=>{
-      for (const item of res.data?.items) { 
+    await axios.get('https://api.quotable.io/random') 
+                  
+      
 
             
 
-            result += `*👻${index}.Title* : ${item.title}\n*🔗Link* : ${item.link}\n*📖Snippet* : ${item.snippet}\n\n`
+     
 
-            index++;
-        return void M.reply('${result}') 
+          
+        return void M.reply('Quotes: {$quote}
 
         }
     }

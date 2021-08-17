@@ -34,7 +34,7 @@ MessageType.image,
 
             undefined,
 
-            `*Did you mean : ₹help*`
+            `*Did you mean : &help*`
 
 )
 

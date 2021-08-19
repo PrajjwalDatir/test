@@ -46,81 +46,81 @@ export default class MessageHandler {
             return void this.client.log(err.message, true)
         }
     }
-    handleDirectMessage = async (M: WAMessage): Promise<void> => {
+   
 
-        const from = M.key.remoteJid
 
-        if (!from) return
 
-        const { message } = M
+        
 
-        if (!message) return
+ 
 
-        const { body } = this.getBase(M, message)
 
-        if (!body) return
 
-        const opt = this.parseArgs(body)
 
-        if (!opt) return
 
-        const { args } = opt
 
-        const { user, data } = await this.client.getUser(from)
 
-        if (data.ban) return
 
-        const username = user?.notify || user?.vname || user?.name || ''
 
-        const cmd = args[0].startsWith(this.client._config.prefix)
 
-        console.log(
 
-            chalk.green(!cmd ? '[CHAT]' : '[EXEC]'),
 
-            chalk.blue(moment(Number(M.messageTimestamp) * 1000).format('DD/MM HH:mm:ss')),
 
-            chalk.blueBright(args[0], `[${args.length}]`),
 
-            chalk.yellow('from'),
 
-            chalk.white(username)
 
-        )
 
-        if (!cmd)
 
-            return process.env.EIF
 
-                ? void this.client.reply(
+       
 
-                      from,
+       
 
-                      {
+         
 
-                          body: (
+         
 
-                              await Utils.fetch(
+           
 
-                                  `${process.env.EIF}/${encodeURI(
+          
 
-                                      `chatbot?message=${body}&bot=${this.client._config.name}&user=${from}`
 
-                                  )}`,
 
-                                  {}
+        
 
-                              )
+   
 
-                          ).message
+           
 
-                      },
+       
 
-                      M
+             
 
-                  )
+                      
 
-                : void null
+                       
+
+                             
+
+                               
+
+                  
+
+                               
+
+                                
+
+                              
+
+                        
+
+                     
+
+                      
+
+                  
+
+                
 
 
     moderate = async (M: ISimplifiedMessage): Promise<void> => {

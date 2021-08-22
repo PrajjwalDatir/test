@@ -37,13 +37,13 @@ export default class Command extends BaseCommand {
 
 		const json = JSON.parse(response.body);
 
-		if (response.statusCode === 200) return await message.client.sendMessage(message.jid, '*📌 ' + Lang.QUOTE +'* ```' + json.content + '```\n\n' +
+		if (response.statusCode === 200) return await M.client.sendMessage(M.jid, '*📌 ' + Lang.QUOTE +'* ```' + json.content + '```\n\n' +
 
 		'*✒️' + Lang.AUTHOR +'* ```' + json.author+ '```\n', MessageType.text);
 
 	} catch {
 
-		return await message.client.sendMessage(message.jid, Lang.NOT_FOUNDA, MessageType.text);
+		return await M.client.sendMessage(M.jid, Lang.NOT_FOUNDA, MessageType.text);
 
 	}}
 

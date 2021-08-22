@@ -6,10 +6,10 @@ import axios from 'axios'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'command_goes_here',
-            description: 'command description',
-            category: 'category',
-            usage: `${client.config.prefix}command`
+            command: 'quote',
+            description: 'random quote',
+            category: 'fun',
+            usage: `${client.config.prefix}quote`
         })
     }
 

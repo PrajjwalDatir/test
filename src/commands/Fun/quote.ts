@@ -33,17 +33,17 @@ export default class Command extends BaseCommand {
 
 	try {
 
-		const response = await got(url);
+		const response = await get(url);
 
 		const json = JSON.parse(response.body);
 
-		if (response.statusCode === 200) return await M.client.sendMessage(M.jid, '*📌 ' + Lang.QUOTE +'* ```' + json.content + '```\n\n' +
+		if (response.statusCode === 200) return await M.client.sendMessage(M.jid, '*📌 ' + text.QUOTE +'* ```' + json.content + '```\n\n' +
 
-		'*✒️' + Lang.AUTHOR +'* ```' + json.author+ '```\n', MessageType.text);
+		'*✒️' + M.AUTHOR +'* ```' + json.author+ '```\n', MessageType.text);
 
 	} catch {
 
-		return await M.client.sendMessage(M.jid, Lang.NOT_FOUNDA, MessageType.text);
+		return await M.client.sendMessage(M.jid, M.NOT_FOUNDA, MessageType.text);
 
 	}}
 

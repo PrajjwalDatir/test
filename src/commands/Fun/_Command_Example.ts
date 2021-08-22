@@ -2,7 +2,7 @@ import MessageHandler from '../Handlers/MessageHandler'
 import BaseCommand from '../lib/BaseCommand'
 import WAClient from '../lib/WAClient'
 import { IParsedArgs, ISimplifiedMessage } from '../typings'
-
+import axios from 'axios'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
@@ -14,5 +14,14 @@ export default class Command extends BaseCommand {
     }
 
     //eslint-disable-next-line
-    run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {}
+    run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {
+    axios.get(`https://api.quotable.io/random`)
+
+  .then(function (response) {
+
+    // handle success
+
+    console.log(response);
+
+  })
 }

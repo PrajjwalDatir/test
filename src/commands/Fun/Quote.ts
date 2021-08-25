@@ -15,13 +15,18 @@ export default class Command extends BaseCommand {
 
     //eslint-disable-next-line
     run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {
-    axios.get(`https://api.quotable.io/random`)
+    await axios.get(`https://api.quotable.io/random`)
 
   .then(function (response) {
 
     // handle success
 
     console.log(response);
+        let text+= response.= `🎧 *content:* ${text.qoute || ''}\n🎤 *Artists:* ${(text.artists || ' '}
+           
+        M.reply(text) 
+     
+       
 
   })
 }

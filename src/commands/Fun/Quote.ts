@@ -22,11 +22,11 @@ export default class Command extends BaseCommand {
     // handle success
 
     console.log(response);
-        let text= `👨‍💻 *content:* ${text.content || ''}\n👨‍🎨 *Artists:* ${(text.artists || ' '}
+        let text= `👨‍💻 *content:* ${text.content || ''}\n👨‍🎨 *Artists:* ${text.artists || ' '}
            
         M.reply(text) 
      
        
 
-  })
+  }
 }

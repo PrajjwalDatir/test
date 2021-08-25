@@ -22,7 +22,7 @@ export default class Command extends BaseCommand {
     // handle success
 
     console.log(response);
-        let text+= response.= `🎧 *content:* ${text.qoute || ''}\n🎤 *Artists:* ${(text.artists || ' '}
+        let text= `👨‍💻 *content:* ${text.qoute || ''}\n👨‍🎨 *Artists:* ${(text.artists || ' '}
            
         M.reply(text) 
      

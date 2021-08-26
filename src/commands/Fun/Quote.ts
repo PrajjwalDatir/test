@@ -15,7 +15,7 @@ export default class Command extends BaseCommand {
 
     //eslint-disable-next-line
     run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {
-    await axios.get(`https://api.quotable.io/random`)
+    const response = await axios.get(`https://api.quotable.io/random`)
 
   .then(function (response) {
 

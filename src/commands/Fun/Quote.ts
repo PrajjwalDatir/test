@@ -14,19 +14,20 @@ export default class Command extends BaseCommand {
     }
 
     //eslint-disable-next-line
-    run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {
-    const response = await axios.get(`https://api.quotable.io/random`)
+    run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {}
 
-  .then(function (response) {
+    
 
-    // handle success
 
-    console.log(response);
-        let text= 👨‍💻 *content:* ${text.content || ''}\n👨‍🎨 *Artists:* ${text.artists || ' '}
+
+
+
+
+       
            
-        M.reply(text) 
+      
      
        
 
-  }
-}
+
+

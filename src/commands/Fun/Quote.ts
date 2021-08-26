@@ -16,16 +16,17 @@ export default class Command extends BaseCommand {
     //eslint-disable-next-line
     run = async (M: ISimplifiedMessage, args: IParsedArgs): Promise<void> => {
         const response = await axios.get(`https://api.quotable.io/random`)
-
-            .then(function (response) {
+        .then((response) => {
                 // console.log(response);
                 const text = `👨‍💻 *content:* ${response.content}\n👨‍🎨 \n*Artists:* ${response.artists}`
                 M.reply(text);
+            }).catch(err => {
+                M.reply(`🔍 Error: ${err}`)
             }
+            )
+    };
 
-       }
-
-  }
+}
 
     
 
